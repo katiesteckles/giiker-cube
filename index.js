@@ -1,3 +1,25 @@
+function toHexVal(value) {
+			var raw = [];
+			for (var i = 0; i < 20; i++) {
+				raw.push(value.getUint8(i));
+			}
+			if (raw[18] == 0xa7) { // decrypt
+				var key = [176, 81, 104, 224, 86, 137, 237, 119, 38, 26, 193, 161, 210, 126, 150, 81, 93, 13, 236, 249, 89, 235, 88, 24, 113, 81, 214, 131, 130, 199, 2, 169, 39, 165, 171, 41];
+				var k1 = raw[19] >> 4 & 0xf;
+				var k2 = raw[19] & 0xf;
+				for (var i = 0; i < 18; i++) {
+					raw[i] += key[i + k1] + key[i + k2];
+				}
+				raw = raw.slice(0, 18);
+			}
+			var valhex = [];
+			for (var i = 0; i < raw.length; i++) {
+				valhex.push(raw[i] >> 4 & 0xf);
+				valhex.push(raw[i] & 0xf);
+			}
+			return valhex;
+		}
+
 const SERVICE_UUID = '0000aadb-0000-1000-8000-00805f9b34fb';
 const CHARACTERISTIC_UUID = '0000aadc-0000-1000-8000-00805f9b34fb';
 
