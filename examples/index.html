@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>GiiKER API Tester</title>
-		<script type="module" src="index.js" defer charset="utf-8"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-		<style>
-			body {
-				text-align: center;
-			}
-			button {
-				margin: 1em 0;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<button class="button is-primary is-large is-rounded">Connect!</button>
-			<textarea class="textarea is-primary" type="text" placeholder="Primary textarea"></textarea>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>GiiKER API Tester</title>
+    <script type="module" src="index.js" defer charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            margin: 1em 0;
+        }
+
+        .colour {
+            height: 100px;
+            width: 60px;
+            border: thin black solid;
+        }
+        .colour-container {
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="button is-primary is-large is-rounded">Connect!</button>
+    <div class="colour-container">
+        <div id="colour-U" class="colour"></div>
+        <div id="colour-D" class="colour"></div>
+        <div id="colour-F" class="colour"></div>
+        <div id="colour-B" class="colour"></div>
+        <div id="colour-R" class="colour"></div>
+        <div id="colour-L" class="colour"></div>
+    </div>
+</div>
+
+<audio id="audio-U" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+<audio id="audio-U-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+<audio id="audio-D" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+<audio id="audio-D-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+<audio id="audio-F" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+<audio id="audio-F-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+<audio id="audio-B" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+<audio id="audio-B-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+<audio id="audio-R" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+<audio id="audio-R-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+<audio id="audio-L" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+<audio id="audio-L-" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+</body>
 </html>
